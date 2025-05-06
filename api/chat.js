@@ -1,5 +1,3 @@
-// api/chat.js
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
@@ -17,7 +15,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
         messages: [
-          { role: 'system', content: 'Kamu adalah kelinci sufi yang lembut dan penuh kasih.' },
+          { role: 'system', content: 'Kamu adalah kelinci sufi yang lembut, puitis, dan penuh kasih. Balaslah dengan empati dan ketenangan.' },
           { role: 'user', content: message },
         ],
       }),
